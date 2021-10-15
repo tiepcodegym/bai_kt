@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 1
+câu lệnh để hiển thị 1 hộp thoại là
+<script>
+    alert("nội dung")
+</script>
+Cú pháp để hiển thị tên tôi lên hộp thoại là
+<script>
+    alert("Tiep")
+</script>
+ Bài 2
+câu lệnh dùng để nhận 1 giá trị số từ hộp thoại là
+<script>
+   let a=parent(prompt("nhập số"))
+   let b=a*a;
+   alert("bình phương số a là" +b)
+</script>
+ Bài 3
+câu lệnh để nhận giá trị từ 1 ô input là
+<input type="text">
+Viết code nhận a và b từ 2 ô input và hiển thị ra thẻ h1
+<input id="a1" type="text"><input id= "a2" type="text"><button onclick="tinh()">Tính S</button>
+<h1 id="b"></h1>
+<script>
+    function tinh() {
+        let b1 = document.getElementById("a1").value;
+        let b2 = document.getElementById("a2").value;
+        let b3 = b1 * b2
+        document.getElementById("b").innerHTML = +b3;
+    }
+</script>
+Bài 4
+a.tính chu vi, diện tích hình vuông
+<input type="text" id="nhapVao">
+<button onclick="ham()">Tính</button>
+<p id="A"></p>
+<p id="chuVi"></p>
+<p id="DienTich"></p>
+<script>
+    function ham() {
+        let a=+document.getElementById("nhapVao").value;
+        let chuVi=a*4
+        let dienTich=a*a;
+        document.getElementById("A").innerHTML="Độ dài là "+a
+        document.getElementById("chuVi").innerHTML="Chu Vi là "+chuVi
+        document.getElementById("DienTich").innerHTML="Diện tích là "+dienTich
+    }
+</script>
+b.Nhập vào a và b tính a^2 a^b
+<input id="a1" type="text"><input id= "a2" type="text"><button onclick="tinh()">Tính</button>
+<p id="b"></p>
+<p id="c"></p>
+<script>
+    function tinh() {
+        let b1 = document.getElementById("a1").value;
+        let b2 = document.getElementById("a2").value;
+
+        document.getElementById("b").innerHTML = ("bình phương của a là: " +b1*b1);
+        document.getElementById("c").innerHTML = ("a^b là: " +b1**b2);
+    }
+</script>
+f. Kiểm tra xem 3 cạnh có là cạnh của
+ i.tam giác?
+<script>
+    let a=+prompt("Nhập cạnh a");
+    let b=+prompt("Nhập cạnh b");
+    let c=+prompt("Nhập cạnh c");
+    if((a+b)>c&&(a-b)<c){
+        alert("a,b,c là ba cạnh tam giác");
+    }else {
+        alert("a,b,c không là ba cạnh tam giác");
+    }
+</script>
+ii.tam giác cân
+<script>
+    let a = +prompt("nhập a :");
+    let b = +prompt("nhập b");
+    let c = +prompt("nhập c");
+    if (a > 0 && b > 0 && c > 0) {
+        if (a + b > c && b + c > a && a + c > b) {
+            if (a === b || a === c || b === c) {
+                alert(" a,b,c là cạnh của tam giác cân")
+            } else {
+                alert(" a,b,c không phải là cạnh của tam giác cân")
+            }
+        }else{
+            alert("a,b,c không phải là 3 cạnh của tam giác")
+        }
+    }
+
+</script>
+iii tam giác đều
+<script>
+
+    let a = +prompt("nhập a :");
+    let b = +prompt("nhập b");
+    let c = +prompt("nhập c");
+    if (a > 0 && b > 0 && c > 0) {
+        if (a + b > c && b + c > a && a + c > b) {
+            if (a === b && a === c && b === c) {
+                alert("a,b,c là tam giác đều")
+            } else {
+                alert("a,b,c không phải là tam giác đều")
+            }
+        }else{
+            alert("a,b,c không phải là 3 cạnh của tam giác")
+        }
+    }
+</script>
+
+
+
+</body>
+</html>
